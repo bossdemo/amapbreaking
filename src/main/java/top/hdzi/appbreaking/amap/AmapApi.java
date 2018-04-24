@@ -15,9 +15,15 @@ import java.util.Map;
 public class AmapApi {
     /**
      * 高德地图搜索列表
-     * @param pos
-     * @param keyword
-     * @param locale
+     * @param pos 当前位置
+     * @param keyword 搜索关键字
+     * @param locale 搜索区域([(起始经度, 起始纬度, 结束经度, 结束纬度])
+     *                    (起始纬度)
+     *               |--------------|
+     *      (起始经度)|              | (结束经度)
+     *               |              |
+     *               |--------------|
+     *                   (结束纬度)
      * @return
      */
     public static Map searchList(String[] pos, String keyword, String[] locale) {
@@ -40,7 +46,7 @@ public class AmapApi {
 
     /**
      * 详情页
-     * @param id
+     * @param id 高德地图店面id
      * @return
      */
     public static Map searchDeep(String id) {
@@ -64,9 +70,17 @@ public class AmapApi {
 
     /**
      * 搜索结果+详情页(details字段)
-     * @param pos
-     * @param keyword
-     * @param locale
+     * @param pos 当前位置
+     * @param keyword 搜索关键字
+     * @param pos 当前位置
+     * @param keyword 搜索关键字
+     * @param locale 搜索区域([(起始经度, 起始纬度, 结束经度, 结束纬度])
+     *                    (起始纬度)
+     *               |--------------|
+     *      (起始经度)|              | (结束经度)
+     *               |              |
+     *               |--------------|
+     *                   (结束纬度)
      * @return
      */
     public static List search(String[] pos, String keyword, String[] locale) {
